@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Almarai", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+ 
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(16, 34, 64, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin-left: 2rem;
+    position: relative;
+  }
+  
+  .nav-link {
+    color: #e6f1ff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #64ffda;
+    transform: translateY(-2px);
+  }
+body {
+
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.book-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.book-card:active {
+    transform: scale(0.95);
+}
+
+.book-card:hover {
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.book-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-content {
+    padding: 1.5rem;
+}
+
+.book-title {
+    color: #2c3e50;
+    margin-bottom: 0.7rem;
+    font-size: 1.3rem;
+}
+
+.book-price {
+    color: #e74c3c;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.buy-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+}
+
+.buy-btn:active {
+    transform: translateY(0) scale(0.95);
+}
+
+@keyframes cardEntry {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book-card {
+    animation: cardEntry 0.6s ease forwards;
+}
+
+.book-card:nth-child(1) { animation-delay: 0.1s; }
+.book-card:nth-child(2) { animation-delay: 0.2s; }
+.book-card:nth-child(3) { animation-delay: 0.3s; }
+.book-card:nth-child(4) { animation-delay: 0.4s; }
+.book-card:nth-child(5) { animation-delay: 0.5s; }
+.book-card:nth-child(6) { animation-delay: 0.6s; }
+
+@media (max-width: 768px) {
+    .books-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .books-container {
+        grid-template-columns: 1fr;
+    }
+    .book-image {
+        height: 300px;
+    }
+}
+.img3{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 10px;
+  }
